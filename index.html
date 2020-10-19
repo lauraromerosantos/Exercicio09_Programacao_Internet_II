@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 09 - Programação para Internet II </title>
+        <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
+        <!-- Usando o CDN do JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <h1>Cadastro de disciplinas do semestre</h1>
+        <form name="disciplinas" action="cadastrar.php" onsubmit="return validarForm()" method="POST">
+
+            <label>Disciplina: </label><input type="text" name="txtDisciplina"><br><br>
+            <label>Professor: </label><input type="text" name="txtProfessor"><br><br>
+            <label>Semestre: </label><input type="number" name="txtSemestre"><br><br>
+            <input type="submit" value="Cadastrar"/>
+
+        </form>
+        <hr>
+        <h2>Disciplinas cadastradas</h2>
+        <br>
+
+        <div id="dinamico"></div>
+        <button onclick="lerDinamico()">Mostrar</button>
+
+    </body>
+</html>
